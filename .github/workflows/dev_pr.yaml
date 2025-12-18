@@ -1,0 +1,19 @@
+name: wf_dev_pr
+##tell that events on which this workflow runs
+on:
+ ##if left empty then whenever the pull request event is triggerered
+  pull_request: 
+  ##trigger only on develop
+    branches:
+      - develop
+##it tells the task performed in the workflow
+jobs:
+##each job is created on a runner 
+  dev_pr_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Welcome steps
+      ##it is on runner machine
+        run: echo "Welcome to the github actions"
+    
+  
